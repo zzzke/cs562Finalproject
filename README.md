@@ -16,12 +16,14 @@ access_token = 'YOUR-ACCESS-TOKEN'
 access_secret = 'YOUR-ACCESS-SECRET'
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
-
 api = tweepy.API(auth)
+
 Removing stop-words
 Given the nature of our data and our tokenisation, we should also be careful with all the punctuation marks and with terms like RT (used for re-tweets) and via(used to mention the original author of an article or a re-tweet), which are not in the default stop-word list.
+
 NLP tasks using TextBlob Sentiment Analysis
 The sentiment property returns a named tuple of the form Sentiment(polarity,subjectivity). The polarity score is a float within the range [-1.0, 1.0]. The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective.
+
 WordCloud and BaseMap for Viusalization
 Matplotlib‘s main tool for this type of visualization is the Basemap toolkit, which is one of several Matplotlib toolkits which lives under the mpl_toolkitsnamespace. Basemap is a useful tool for Python users to have in their virtual toolbelts.
 Word clouds are a very information-dense representation of the frequency of all words in a given text. Word clouds are more effective than just using bar charts displaying the counts of words for large amounts of text, as the chart would be difficult to parse if there are too many bars.
